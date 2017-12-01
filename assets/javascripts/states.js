@@ -2,12 +2,11 @@
 	"use strict";
 	// (c) ammap.com | SVG (in JSON format) map of USA
 	// areas: {id:"US-AK"},{id:"US-AL"},{id:"US-AR"},{id:"US-AZ"},{id:"US-CA"},{id:"US-CO"},{id:"US-CT"},{id:"US-DC"},{id:"US-DE"},{id:"US-FL"},{id:"US-GA"},{id:"US-HI"},{id:"US-IA"},{id:"US-ID"},{id:"US-IL"},{id:"US-IN"},{id:"US-KS"},{id:"US-KY"},{id:"US-LA"},{id:"US-MA"},{id:"US-MD"},{id:"US-ME"},{id:"US-MI"},{id:"US-MN"},{id:"US-MO"},{id:"US-MS"},{id:"US-MT"},{id:"US-NC"},{id:"US-ND"},{id:"US-NE"},{id:"US-NH"},{id:"US-NJ"},{id:"US-NM"},{id:"US-NV"},{id:"US-NY"},{id:"US-OH"},{id:"US-OK"},{id:"US-OR"},{id:"US-PA"},{id:"US-RI"},{id:"US-SC"},{id:"US-SD"},{id:"US-TN"},{id:"US-TX"},{id:"US-UT"},{id:"US-VA"},{id:"US-VT"},{id:"US-WA"},{id:"US-WI"},{id:"US-WV"},{id:"US-WY"}
-	var Maps = { states: {} };
 
-	Maps.states = {
+	var States = {
 		"svg": {
 			"g": {
-				"path": [
+				"paths": [
 					// {
 					// 	"id":"US-AK",
 					// 	"title":"Alaska",
@@ -300,7 +299,7 @@
 		}
 	};
 
-	Maps.build = function build() {	
+	States.build = function build(paths) {	
 	  function _allegianceColor(allegiance) {
 	    if (allegiance && allegiance.toLowerCase() === "confederate") {
 	      return "crimson";
@@ -311,12 +310,12 @@
 	    }
 	  }
 
-		Maps.states.svg.g.path.forEach(function(path) {
+		paths.forEach(function(path) {
 		  document
 		  	.getElementById("united-states")
 		  	.innerHTML += '<path d="' + path.d + '" fill="' + _allegianceColor(path.allegiance) + '" stroke="white"/>'
 		});
 	}
 
-	Maps.build();
+	States.build(States.svg.g.paths);
 }());
