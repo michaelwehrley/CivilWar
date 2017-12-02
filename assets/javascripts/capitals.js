@@ -20,7 +20,7 @@
             // February 4, 1861
             "id":"CS-Montgomery",
             "dates": [],
-            "allegiance":"confederate",
+            "allegiance":"Confederacy",
             "title":"Montgomery",
             "cx": "815",
             "cy": "470",
@@ -30,7 +30,7 @@
             // May 30, 1861 - May 9, 1865
             "id":"CS-Richmond",
             "dates": [],
-            "allegiance":"confederate",
+            "allegiance":"Confederacy",
             "title":"Richmond",
             "cx": "967",
             "cy": "325",
