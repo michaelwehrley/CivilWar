@@ -7,14 +7,8 @@
 
   var START_DATE = "12-20-1860";
 
-  // if (location.hash === "") {
-  //   date = moment(START_DATE, "MM-DD-YYYY");
-  // } else {
-  //   date = moment(location.hash.replace(/#/, ""), "MM-DD-YYYY");
-  // }
-
   CivilWar.dates = {
-    selectedDate: moment(START_DATE, "MM-DD-YYYY"),
-    startDate: moment(START_DATE, "MM-DD-YYYY")
+    selected: moment(START_DATE, "MM-DD-YYYY"),
+    start: moment(START_DATE, "MM-DD-YYYY") 
   }
 }());
