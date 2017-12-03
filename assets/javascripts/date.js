@@ -6,9 +6,11 @@
   // War: April 12, 1861 – May 9, 1865
 
   var START_DATE = "11-06-1860";
+  var FORMAT = "MM-DD-YYYY";
 
   CivilWar.dates = {
+    format: FORMAT,
     selected: moment(START_DATE, "MM-DD-YYYY"),
-    start: moment(START_DATE, "MM-DD-YYYY") 
+    start: moment(START_DATE, "MM-DD-YYYY")
   }
 }());

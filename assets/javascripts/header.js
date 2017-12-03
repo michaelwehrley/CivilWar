@@ -1,8 +1,7 @@
 (function() {
   var header = document.getElementById("page-header");
-  var slider = document.getElementById("date-slider");
 
-  function listen() {
+  function listenTo(slider) {
     slider.addEventListener("input", function (event) {
       update();
     }, false);
@@ -13,7 +12,7 @@
   }
 
   CivilWar.header = {
-    listen: listen,
+    listenTo: listenTo,
     update: update
   }
 }());

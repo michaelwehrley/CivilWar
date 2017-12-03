@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  function listen() {
+  function emit() {
     var element = document.getElementById("date-slider");
 
     element.oninput = function(event) {
@@ -12,6 +12,6 @@
   }
 
   CivilWar.slider = {
-    listen: listen
+    emit: emit
   }
 }());
