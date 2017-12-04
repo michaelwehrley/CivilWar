@@ -6,7 +6,7 @@
   // February 4 until May 29, 1861, in the Alabama State Capitol.
   // Six states created the Confederate States of America there on February 8, 1861.
 
-  var paths = [
+  var capitals = [
     {
       "id":"US-Washington-DC",
       "startDate": "07-16-1790",
@@ -42,11 +42,11 @@
   ]
 
   function build() { 
-    paths.forEach(function(path) {
-      if (isCapital(path)) {
+    capitals.forEach(function(capital) {
+      if (isCapital(capital)) {
         document
           .getElementById("united-states")
-          .innerHTML += '<circle cx="' +  path.cx + '" cy="' + path.cy + '" r="' + path.r + '" fill="gold" stroke="black" />'
+          .innerHTML += '<circle cx="' +  capital.cx + '" cy="' + capital.cy + '" r="' + capital.r + '" fill="gold" stroke="black"><title>' + capital.title + '</title></path>'
       }
     });
   }
