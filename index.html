@@ -18,6 +18,8 @@
   <script src="./assets/javascripts/states.js" type="text/javascript"></script>
   <script src="./assets/javascripts/capitals.js" type="text/javascript"></script>
   <script src="./assets/javascripts/slider.js" type="text/javascript"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script type="text/javascript">
     var slider = document.getElementById("date-slider");
 
@@ -28,5 +30,15 @@
     CivilWar.header.update();
     CivilWar.header.listenTo(slider);
     CivilWar.slider.emit();
+
+    var paths = document.getElementsByTagName("path");
+    
+    paths = [].slice.call(paths, 0);
+    paths.forEach(function(path) {
+      path.addEventListener('click', function(event) {
+        var svg = document.getElementsByTagName('svg')[0];
+        svg.innerHTML = '<g transform="scale(45)"><path transform="scale(45)" d="'+path.getAttribute('d')+'" fill="red"><path></g>';
+      });
+    });
   </script>
 </html>

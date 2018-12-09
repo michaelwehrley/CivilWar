@@ -313,7 +313,7 @@
     states.forEach(function(state) {
       document
         .getElementById("united-states")
-        .innerHTML += '<path d="' + state.d + '" fill="' + setAllegianceColor(state) + '" stroke="white" title="asdf"><title>' + state.title + '</title></path>'
+        .innerHTML += '<path d="' + state.d + '" fill="' + setAllegianceColor(state) + '" stroke="white"><title>' + state.title + '</title></path>'
     });
   }
 
